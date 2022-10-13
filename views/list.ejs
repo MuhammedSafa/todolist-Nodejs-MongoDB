@@ -1,0 +1,41 @@
+<%- include('partials/header'); -%>
+
+    <div class="box" id="heading">
+        <% if( listTitle==="My Lists" ){ %>
+            <h1>My Lists
+            </h1>
+            <% } else{ %>
+                <h1>List Name is <%= listTitle %>
+                </h1>
+                <% } %>
+
+    </div>
+
+    <div class="box">
+        <% newItemList.forEach(function(item){ %>
+            <form action="/delete" method="post">
+                <div class="item">
+                    <input name="checkbox2" style="display: none" value=<%=listTitle %>>
+                    <input type="checkbox" name="checkbox" onChange="this.form.submit()" value=<%=item._id %>>
+                    <p>
+                        <% if( listTitle==="My Lists" ){ %>
+                            <a href="/<%= item.name %>" class="btn btn-primary" role="button">
+                                <%= item.name %>
+                            </a>
+                            <% } else{ %>
+                                <%= item.name %>
+                                    <% } %>
+
+                    </p>
+                </div>
+            </form>
+            <% }); %>
+
+                <form class="item" action="/" method="post">
+                    <label for="newItem"></label>
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="list" value=<%=listTitle %>>+</button>
+                </form>
+    </div>
+
+    <%- include('partials/footer'); -%>
