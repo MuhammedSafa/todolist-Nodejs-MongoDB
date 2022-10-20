@@ -10,4 +10,13 @@
 </ol>
 <br>
 
+## Resources
+
+- [MongoDB](https://www.mongodb.com/).
+- [MongooseJS](https://mongoosejs.com/).
+- [NodeJS](https://nodejs.org/).
+- [ExpressJS](https://expressjs.com/).
+- [EJS](https://ejs.co/).
+- [Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
+
 Enjoy the project...
